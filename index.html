@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>layui2.0 || DEMO</title>
     <link rel="stylesheet" href="./layui/css/layui.css">
 </head>
 <body>
     
     <script src="./layui/layui.js"></script>
     <script>
-        
+        // layui.config({
+        //     base: './js/modules/'
+        // }).use('index');
+
+        layui.config({
+            base: './js/modules/'
+        }).use('demo', function() {
+            var demo = layui.demo;
+            demo.welcome();
+        });
     </script>
 </body>
 </html>

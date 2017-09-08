@@ -1,1 +1,19 @@
-a {cursor: pointer;}
+a {
+    cursor: pointer;
+}
+
+.user-info-form {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.layui-progress {
+    margin: 30px;
+}
+.crazy-box {
+    width: 40%;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    transform: rotate(270deg);
+}

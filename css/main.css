@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a {
     cursor: pointer;
 }
@@ -16,4 +17,16 @@ a {
     top: 150px;
     left: 100px;
     transform: rotate(270deg);
+}
+.table-box {
+    width: 70%;
+    margin: 0 auto;
+}
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.layui-table-view {
+    margin: 0 auto;
 }

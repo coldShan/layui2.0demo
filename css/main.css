@@ -53,3 +53,9 @@ a {
     background: url(../img/require.png) no-repeat left center;
     padding-left: 15px;
 }
+
+/* 时间轴 */
+.timeline-box {
+    width: 800px;
+    margin: 30px auto 0;
+}

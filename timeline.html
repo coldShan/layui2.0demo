@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台导航栏布局</title>
+    <link rel="Shortcut Icon" href="http://demo.dahe.cn/xrf/qx/favicon.ico">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">不存在的后台管理系统</div>
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="#">装备一览</a></li>
+                <li class="layui-nav-item"><a href="#">技能</a></li>
+                <li class="layui-nav-item"><a href="#">杂货铺</a></li>
+                <li class="layui-nav-item">
+                    <a href="#">职业分类</a>
+                    <dl class="layui-nav-child">
+                        <dd><a>记者</a></dd>
+                        <dd><a>编辑</a></dd>
+                        <dd><a>程序员大人</a></dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a><img src="./img/userIcon.jpg" class="layui-nav-img" alt="">邢看山</a>
+                    <dl class="layui-nav-child">
+                        <dd><a>基本资料</a></dd>
+                        <dd><a>账户设置</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a>退出</a></li>
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree" lay-filter="navTree">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a>所有物品</a>
+                        <dl class="layui-nav-child">
+                            <dd><a>武器<span class="layui-badge">new</span></a></dd>
+                            <dd><a>防具</a></dd>
+                            <dd><a>回复</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a>社交</a>
+                        <dl class="layui-nav-child">
+                            <dd><a>公会</a></dd>
+                            <dd><a>好友<span class="layui-badge">+62</span></a></dd>
+                            <dd><a>仇人</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a>帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <span class="layui-breadcrumb">
+                <a href="./">首页</a>
+                <a href=""><cite>时间轴</cite></a>
+            </span>
+            <div class="timeline-box">
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">9月10日</h3>
+                            <p>
+                                每天做两件自己讨厌的事对灵魂是有好处的<br>
+                                说这话的显然是个聪明人<br>
+                                我一丝不苟地遵从他的建议<br>
+                                因此我每天早上都会起床，晚上也都会睡觉
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">9月8日</h3>
+                            <p>
+                                萍水相逢，当知聚散无定，<br>
+                                劳燕分飞，常念相会有时
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月27日</h3>
+                            <p>
+                                Is the Holocaust an aberration or a reflection of who we really are ?
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月20日</h3>
+                            <p>
+                                饭桌上没得谈了，领导们又带我们去了普定最好的酒店<br>
+                                普定大酒店<br>
+                                之前我们问过最便宜的也要300多一间，嫌贵没住<br>
+                                这趟来普定我们住的酒店128一天，没窗特价
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月17日</h3>
+                            <p>
+                                大道废，有仁义；慧智出，有大伪
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月15日</h3>
+                            <p>
+                                故乡真小<br>
+                                小的只盛得下<br>
+                                两个字
+                            </p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月27日</h3>
+                            <p>
+                                大漠孤烟直，
+                                长河落日圆
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-footer">
+            <p>版权所有:coldshan　备案号: 554655©coldshan58　UI框架---layui</p>
+        </div>
+    </div>
+
+    <script src="./layui/layui.js"></script>
+    <script>
+        layui.use('element', function () {
+            var element = layui.element;
+        })
+    </script>
+</body>
+
+</html>

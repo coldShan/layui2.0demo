@@ -198,8 +198,29 @@
             })
 
             // 时间选择器
-            laydate.render({
-                elem: '#birthday'
+            var  what = laydate.render({
+                elem: '#birthday',
+                type: 'date',
+                value: '1996年2月5日',
+                // range: '~'
+                format: 'yyyy年M月dd日',
+                ready: function(data) {
+                    layer.msg('请选择时间', {time: 1000})
+                },
+                min: '1900-01-01',
+                max: 0,
+                theme: 'molv',
+                calendar: true,
+                mark: {
+                    '0-02-05': '生日'
+                },
+                change: function(value, date, endDate) {
+                    console.log(value);
+                    // what.hint(value);
+                },
+                done: function(value, date, endDate) {
+                    console.log('你选择了' + value);
+                }
             });
         });
     </script>

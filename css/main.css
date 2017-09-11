@@ -1,4 +1,14 @@
 @charset "UTF-8";
+
+/* 清除input框样式 */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
 a {
     cursor: pointer;
 }
@@ -29,4 +39,17 @@ a {
 }
 .layui-table-view {
     margin: 0 auto;
+}
+
+/* form样式 */
+.layui-form-item.job-form {
+    width: 300px;
+}
+.layui-form-item {
+    width: 60%;
+}
+
+.required {
+    background: url(../img/require.png) no-repeat left center;
+    padding-left: 15px;
 }

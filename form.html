@@ -139,6 +139,13 @@
                         </div>
                     </div>
                     <div class="layui-form-item">
+                        <label class="layui-form-label">相册</label>
+                        <!-- <div class="layui-input-block"></div> -->
+                        <button class="layui-btn layui-btn-primary" type="button" id="file-upload">
+                            <i class="layui-icon">&#xe67c;</i>上传附件
+                        </button>
+                    </div>
+                    <div class="layui-form-item form-submit">
                         <div class="layui-input-block">
                             <button class="layui-btn" lay-submit lay-filter="userForm">提交信息</button>
                             <button class="layui-btn layui-btn-primary" type="reset">重新填写</button>
@@ -147,7 +154,7 @@
                 </form>
             </div>
         </div>
-
+        <img src="" alt="" id="imgPreview" class="imgPreview">
         <div class="layui-footer">
             <p>版权所有:coldshan　备案号: 554655©coldshan58　UI框架---layui</p>
         </div>
@@ -156,11 +163,12 @@
     <script src="./layui/layui.js"></script>
     <script>
         var profession = "";
-        layui.use(['form', 'element', 'laydate', 'layer', 'jquery'], function () {
+        layui.use(['form', 'element', 'laydate', 'layer', 'jquery', 'upload'], function () {
             var element = layui.element;
             var form = layui.form;
             var laydate = layui.laydate;
             var $ = layui.$;
+            var upload = layui.upload;
 
             // 监听form事件
             form.on('switch(showGender)', function (data) {
@@ -222,6 +230,38 @@
                     console.log('你选择了' + value);
                 }
             });
+
+            // 文件上传
+            upload.render({
+                elem: '#file-upload',
+                url: '', // 上传接口
+                method: '', // 默认post
+                data: {},
+                auto: false, // 是否选完文件后自动上传。如果设定 false，那么需要设置 bindAction 参数来指向一个其它按钮提交上传
+                accept: 'file', // 允许上传的文件类型
+                size: 5120, // 单位 KB。不支持ie8/9
+                multiple: true,
+                drag: true,
+                choose: function(obj) {
+                    var files = obj.pushFile();
+                    obj.preview(function(index, file, result) {
+                        // console.log(result);
+                        $("#imgPreview").attr("src", result);
+                    })
+                },
+                before: function(obj) {
+
+                },
+                done: function(res, index, upload) { //res（服务端响应信息）、index（当前文件的索引）、upload（重新上传的方法，一般在文件上传失败后使用）
+                    var item = this.item;
+                    //获取当前触发上传的元素，一般用于 elem 绑定 class 的情况
+                    // 上传完毕回调
+                },
+                error: function(index, upload) { // index（当前文件的索引）、upload（重新上传的方法）
+                    // 请求异常回调
+                },
+                
+            })
         });
     </script>
 </body>

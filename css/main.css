@@ -53,9 +53,16 @@ a {
     background: url(../img/require.png) no-repeat left center;
     padding-left: 15px;
 }
+.form-submit {
+    margin-top: 30px;
+}
+.imgPreview {
+    width: 300px;
+    float: right;
+}
 
 /* 时间轴 */
-.timeline-box {
+.timeline-box, .page-area {
     width: 800px;
     margin: 30px auto 0;
 }

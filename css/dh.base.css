@@ -1,0 +1,377 @@
+@charset "UTF-8";
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+div,
+input,
+textarea,
+ul,
+ol,
+li{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+/* 清除li默认样式*/
+li {
+    list-style: none;
+}
+/* 清除input框样式 */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+/* 清除a标签默认样式 */
+ a {
+    color: #000;
+    text-decoration: none;
+}
+/* 解决ie9-下图片边框 */
+img {
+    border: 0;
+    display: block;
+}
+/* 解决ie下不定高盒子坍缩 */
+.dh-overflow {
+    overflow: hidden;
+}
+/* 元素显示隐藏 */
+ .dh-show {
+     display: block;
+ }
+ .dh-hide {
+     display: none;
+ }
+/* 定义页面字体 */
+html {
+    font-family: "微软雅黑","Microsoft YaHei";
+    font-size: 16px;
+}
+.dh-font-14 {
+    font-size: 14px;
+}
+.dh-font-18 {
+    font-size: 18px;
+}
+.dh-font-20 {
+    font-size: 20px;
+}
+.dh-font-22 {
+    font-size: 22px;
+}
+.dh-font-bold {
+    font-weight: bold;
+}
+/* 浮动与清除浮动 */
+.dh-fl {
+    float: left;
+}
+.dh-fr {
+    float: right;
+}
+.dh-clear {
+    zoom: 1;
+}
+.dh-clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 定义宽度属性 */
+.dh-width {
+    width: 1000px;
+}
+.dh-width-large {
+    width: 1200px;
+}
+.dh-width-small {
+    width: 960px;
+}
+/* 外边距 */
+.dh-m-5{
+    margin:5px;
+}
+.dh-m-10{
+    margin:10px;
+}
+.dh-m-15{
+    margin:15px;
+}
+.dh-m-20{
+    margin:20px;
+}
+.dh-mt-5{
+    margin-top:5px;
+}
+.dh-mt-10{
+    margin-top:10px;
+}
+.dh-mt-15{
+    margin-top:15px;
+}
+.dh-mt-20{
+    margin-top:20px;
+}
+.dh-mb-5{
+    margin-bottom:5px;
+}
+.dh-mb-10{
+    margin-bottom:10px;
+}
+.dh-mb-15{
+    margin-bottom:15px;
+}
+.dh-mb-20{
+    margin-bottom:20px;
+}
+.dh-ml-5{
+    margin-left:5px;
+}
+.dh-ml-10{
+    margin-left:10px;
+}
+.dh-ml-15{
+    margin-left:15px;
+}
+.dh-ml-20{
+    margin-left:20px;
+}
+.dh-mr-5{
+    margin-right:5px;
+}
+.dh-mr-10{
+    margin-right:10px;
+}
+.dh-mr-15{
+    margin-right:15px;
+}
+.dh-mr-20{
+    margin-right:20px;
+}
+/* 内填充 */
+.dh-p-5{
+    padding:5px;
+}
+.dh-p-10{
+    padding:10px;
+}
+.dh-p-15{
+    padding:15px;
+}
+.dh-p-20{
+    padding:20px;
+}
+.dh-pt-5{
+    padding-top:5px;
+}
+.dh-pt-10{
+    padding-top:10px;
+}
+.dh-pt-15{
+    padding-top:15px;
+}
+.dh-pt-20{
+    padding-top:20px;
+}
+.dh-pb-5{
+    padding-bottom:5px;
+}
+.dh-pb-10{
+    padding-bottom:10px;
+}
+.dh-pb-15{
+    padding-bottom:15px;
+}
+.dh-pb-20{
+    padding-bottom:20px;
+}
+.dh-pb-30{
+    padding-bottom:30px;
+}
+.dh-pb-40{
+    padding-bottom:40px;
+}
+.dh-pl-5{
+    padding-left:5px;
+}
+.dh-pl-10{
+    padding-left:10px;
+}
+.dh-pl-15{
+    padding-left:15px;
+}
+.dh-pl-20{
+    padding-left:20px;
+}
+.dh-pr-5{
+    padding-right:5px;
+}
+.dh-pr-10{
+    padding-right:10px;
+}
+.dh-pr-15{
+    padding-right:15px;
+}
+.dh-pr-20{
+    padding-right:20px;
+}
+/* 盒子居中 */
+.dh-box-c {
+    margin: 0 auto;
+}
+/* 元素定位 */
+.dh-position-rel {
+    position: relative;
+}
+.dh-position-abs {
+    position: absolute;
+}
+.dh-position-fix {
+    position: fixed;
+}
+/* 文本定位 */
+.dh-text-c {
+    text-align: center;
+}
+.dh-text-l {
+    text-align: left;
+}
+.dh-text-r {
+    text-align: right;
+}
+/* 单行文本超出省略 */ 
+.dh-text-elli {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/* 通用雪碧图 */
+.dh-bg-sprite {
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+
+/* 分页-红 */
+#pageArea{
+    clear:both;
+    overflow:hidden;
+    text-align:center;
+    width:320px;
+    margin:30px
+    auto;
+    font-size:12px;
+}
+#pageArea #pageDec{
+    float:left;
+    margin-left: 20px;
+}
+#pageArea #pageDec span{
+    float:left;
+    margin:0 2px;
+    height:28px; line-height:28px;
+    border:1px solid #ecebeb;
+    padding:0 10px;
+    color:#999;
+}
+#pageArea #pageDec strong{
+    float:left;
+    background:#f0c8c8;
+    border:1px solid #e79292;
+    font-weight:bold;
+    color:#fff;
+    padding:0 12px;
+    height:28px;
+    line-height:28px;
+    margin:0 3px;
+}
+#pageArea #pageDec a,#main #pageArea #pageDec a:visited{
+    float:left;
+    margin:0 3px;
+    height:27px;
+    line-height:28px;
+    border:1px solid #d6d6d6;
+    padding:0 10px;
+    text-decoration: none;
+    color: #333333;
+}
+#pageArea #pageDec a:hover{
+    background:#f9e5e5;
+    color:#e79292;
+}
+#pageArea #pageSelect{
+    float:right;
+    margin-right: 20px;
+    line-height: 30px;
+}
+#pageArea #pageSelect label{
+    float:left;
+}
+#pageArea #pageJump{
+    border:#f3d3d3 solid 1px;
+    height:28px;
+    line-height:28px;
+    width:2em;
+    text-align:center;
+    margin:0 3px;
+    float:left;
+}
+#pageArea span{
+    float:left;
+    margin: 0 2px;
+}
+#pageArea .btn2{
+    margin-left:10px;
+    float:left;
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius: 50%;
+    background: #f3d3d3;
+    color: #fff;
+}
+/* 分页-蓝 */
+#pageArea.pageLbue #pageDec span{
+    border-color:#ecebeb;
+}
+#pageArea.pageLbue #pageDec strong{
+    background:#93c7ef;
+    border-color:#85b3d6;
+}
+#pageArea.pageLbue #pageDec a,#main #pageArea.pageLbue #pageDec a:visited{
+    border-color:#d6d6d6;
+}
+#pageArea.pageLbue #pageDec a:hover{
+    background:#eaeef1;
+    color:#4c719e;
+}
+#pageArea.pageLbue #pageJump{
+    border-color:#e8e8e8;
+}
+#pageArea.pageLbue .btn2{
+    background: #93c7ef;
+}
+
+/* 半透明背景 */
+/* 背景透明, 为兼容ie, 文本应写在子元素中, 并设置relative定位 */
+.dh-bg-opa {
+    background: #000;
+    background: rgba(0, 0, 0, .7);
+    filter: alpha(opacity=70);
+    color: #fff;
+}
+.dh-bg-opa .dh-opa-child {
+    position: relative;
+}

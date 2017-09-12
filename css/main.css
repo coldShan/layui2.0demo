@@ -1,23 +1,16 @@
 @charset "UTF-8";
 
-/* 清除input框样式 */
-input[type=number] {
-    -moz-appearance: textfield;
+.main-wrap {
+    width: 100%;
+    margin-top: 30px;
 }
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-}
-
-a {
-    cursor: pointer;
-}
-
-.user-info-form {
+.main-wrap .container {
     width: 800px;
     margin: 0 auto;
 }
-
+a {
+    cursor: pointer;
+}
 .layui-progress {
     margin: 30px;
 }
@@ -62,7 +55,7 @@ a {
 }
 
 /* 时间轴 */
-.timeline-box, .page-area {
+.timeline-box, .page-area, .layer-area {
     width: 800px;
     margin: 30px auto 0;
 }

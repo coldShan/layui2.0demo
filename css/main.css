@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+.layui-body {
+    padding: 15px;
+}
 .main-wrap {
     width: 100%;
     margin-top: 30px;

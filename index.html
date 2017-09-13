@@ -8,22 +8,14 @@
     <link rel="stylesheet" href="./layui/css/layui.css">
 </head>
 <body>
-    <div class="main-wrap">
-        <script src="./js/nav.js"></script>
+    <div class="layui-layout layui-layout-admin">
+        <script src="./js/modules/nav.js"></script>
+        <div class="layui-body">
+                
+        </div>    
     </div>
     
     <script src="./layui/layui.js"></script>
-    <script>
-        // layui.config({
-        //     base: './js/modules/'
-        // }).use('index');
 
-        layui.config({
-            base: './js/modules/'
-        }).use('demo', function() {
-            var demo = layui.demo;
-            demo.welcome();
-        });
-    </script>
 </body>
 </html>

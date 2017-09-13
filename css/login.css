@@ -1,6 +1,9 @@
-html {
-    background: #f3f3f3;
-    /* background: #c1ac96; */
+.main-container {
+    /* background: #f3f3f3; */
+    background: #c1ac96;
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
 }
 .logo2 {
     width: 250px;
@@ -11,7 +14,6 @@ html {
 .login-area {
     width: 300px;
     margin: 0 auto;
-    margin-top: 120px;
 }
 
 .logo img {

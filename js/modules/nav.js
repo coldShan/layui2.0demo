@@ -33,19 +33,19 @@ document.writeln(
                 '<a>主要模块</a>'+
                 '<dl class="layui-nav-child">'+
                     '<dd><a href="./table.html">表格<span class="layui-badge">new</span></a></dd>'+
-                    '<dd><a href="./form.html" class="layui-this">表单</a></dd>'+
+                    '<dd><a href="./form.html">表单</a></dd>'+
                 '</dl>'+
             '</li>'+
-            '<li class="layui-nav-item">'+
-                '<a>社交</a>'+
+            '<li class="layui-nav-item layui-nav-itemed">'+
+                '<a>工具</a>'+
                 '<dl class="layui-nav-child">'+
-                    '<dd><a>公会</a></dd>'+
-                    '<dd><a>好友<span class="layui-badge">+62</span></a></dd>'+
-                    '<dd><a>仇人</a></dd>'+
+                    '<dd><a href="./progress.html">进度条</a></dd>'+
+                    '<dd><a href="./carousel.html">轮播图</a></dd>'+
+                    '<dd><a href="./timeline.html">时间轴</a></dd>'+
                 '</dl>'+
             '</li>'+
             '<li class="layui-nav-item"><a>帮助中心</a></li>'+
         '</ul>'+
     '</div>'+
 '</div>'
-)
+);

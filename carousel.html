@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layui2.0 | 轮播图</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <script src="./js/modules/nav.js"></script>
+        <div class="layui-body">
+            <span class="layui-breadcrumb"><a href="">首页</a><a><cite>轮播图</cite></a></span>
+            <div class="layui-carousel" id="carousel" lay-filter="carousel">
+                <div carousel-item class="carousel-items" id="imgItems">
+                    <div><img src="./img/carousel/1.jpg" alt=""></div>
+                    <div><img src="./img/carousel/2.jpg" alt=""></div>
+                    <div><img src="./img/carousel/3.jpg" alt=""></div>
+                    <!-- <div><img src="./img/carousel/4.jpg" alt=""></div>
+                    <div><img src="./img/carousel/5.jpg" alt=""></div>
+                    <div><img src="./img/carousel/6.jpg" alt=""></div> -->
+                </div>
+            </div>
+            <button type="button" class="layui-btn" id="moreImg">添加一张图片</button>
+        </div>
+        <div class="layui-footer">
+            <p>版权所有:coldshan　备案号: 554655©coldshan58　UI框架---layui</p>
+        </div>
+    </div>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        layui.use(['element', 'carousel', 'layer'], function () {
+            var element = layui.element;
+            var carousel = layui.carousel;
+            var layer = layui.layer;
+
+            var carouselOptions = {
+                elem: '#carousel',
+                width: '80%',
+                height: '600px',
+                arrow: 'hover',
+                anim: 'default',
+                interval: '1500'
+            }
+            var myCarousel = carousel.render(carouselOptions);
+            carousel.on('change(carousel)', function (obj) {
+                var arr = ["一", "二", "三", "四", "五", "六"]
+                layer.msg("我是第" + arr[obj.index] + "张图片", { time: 800 });
+            });
+            var count = 4;
+            var moreImgBtn = document.getElementById('moreImg');
+            var imgELements = document.getElementById('imgItems');
+            var imgHtml = '<img src="./img/carousel/'+ count +'.jpg" alt="">';
+            moreImgBtn.onclick = function () {
+                if(count < 7) {
+                    var imgBox = document.createElement('div');
+                    imgBox.innerHTML = imgHtml;
+                    imgELements.appendChild(imgBox);
+                    myCarousel.reload(carouselOptions);
+                    count += 1;
+                    imgHtml = '<img src="./img/carousel/'+ count +'.jpg" alt="">';
+                } else {
+                    layer.msg('没有图片啦', {time: 1500});
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

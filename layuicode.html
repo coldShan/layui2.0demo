@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layui2.0 | 代码修饰器</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./layui/css/layui.css">
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <script src="./js/modules/nav.js"></script>
+        <div class="layui-body">
+            <span class="layui-breadcrumb">
+                <a href="">首页</a>
+                <a>
+                    <cite>代码修饰器</cite>
+                </a>
+            </span>
+            <pre class="layui-code code1">
+                function checkRight() {
+                    var addr = location.href.split("/");
+                    if(addr[addr.length-1] !== "login2.html" && addr[addr.length-1] !== "login.html") {
+                        if (sessionStorage.password !== password) {
+                            location.href = "./login.html";
+                        } else {
+                            return;
+                        }
+                    }
+                }
+            });
+            </pre>
+            <pre class="code2" lay-encode="true">
+                <div class="layui-carousel" id="carousel" lay-filter="carousel">
+                    <div carousel-item class="carousel-items" id="imgItems">
+                        <div><img src="./img/carousel/1.jpg" alt=""></div>
+                        <div><img src="./img/carousel/2.jpg" alt=""></div>
+                        <div><img src="./img/carousel/3.jpg" alt=""></div>
+                    </div>
+                </div>
+            </pre>
+        </div>
+    </div>
+    <script src="./layui/layui.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        layui.use(['code', 'element'], function () {
+            var element = layui.element;
+            layui.code({
+                elem: '.code1',
+                title: '风格一'
+            });
+            layui.code({
+                elem: '.code2',
+                title: '风格二',
+                skin: 'notepad',
+                about: false
+            })
+        })
+    </script>
+</body>
+
+</html>

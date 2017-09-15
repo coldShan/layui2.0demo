@@ -43,6 +43,7 @@ document.writeln(
                     '<dd><a href="./carousel.html">轮播图</a></dd>'+
                     '<dd><a href="./timeline.html">时间轴</a></dd>'+
                     '<dd><a href="./tree.html">树形菜单</a></dd>'+
+                    '<dd><a href="./layuicode.html">代码修饰器</a></dd>'+
                 '</dl>'+
             '</li>'+
             '<li class="layui-nav-item"><a>帮助中心</a></li>'+

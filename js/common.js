@@ -5,8 +5,8 @@ layui.use(['form', 'layer', 'jquery'], function () {
     var form = layui.form;
     var $ = layui.$;
 
-    $("#username").val('admin');
-    $("#password").val('admin123');
+    // $("#username").val('admin');
+    // $("#password").val('admin123');
     layer.tips('用户名：admin', '#username', {
         tipsMore: true,
         time: 0
@@ -46,10 +46,9 @@ layui.use(['form', 'layer', 'jquery'], function () {
     })
     function checkRight() {
         var addr = location.href.split("/");
-        console.log(addr[addr.length-1]);
         if(addr[addr.length-1] !== "login2.html" && addr[addr.length-1] !== "login.html") {
             if (sessionStorage.password !== password) {
-                location.href = "./login2.html";
+                location.href = "./login.html";
             } else {
                 return;
             }

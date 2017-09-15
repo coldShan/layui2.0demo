@@ -42,6 +42,7 @@ document.writeln(
                     '<dd><a href="./progress.html">进度条</a></dd>'+
                     '<dd><a href="./carousel.html">轮播图</a></dd>'+
                     '<dd><a href="./timeline.html">时间轴</a></dd>'+
+                    '<dd><a href="./tree.html">树形菜单</a></dd>'+
                 '</dl>'+
             '</li>'+
             '<li class="layui-nav-item"><a>帮助中心</a></li>'+

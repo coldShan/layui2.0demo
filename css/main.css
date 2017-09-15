@@ -71,3 +71,8 @@ a {
     width: 100%;
     height: 100%;
 }
+
+/* 树形菜单 */
+.layui-tree-skin-gay .layui-tree-branch{
+    color: #1E9FFF;
+}
